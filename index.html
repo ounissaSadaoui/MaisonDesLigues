@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison des Ligues Ounissa</title>
+    <meta name="description" content="Site ligue de tous les sports, pour la maison des ligues de Lorraine">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="manifest" href="./favicon/site.webmanifest">    
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <title>Maison des Ligues de Lorraine, by Ounissa</title>
 </head>
 <body>
-    <Header><h1>Page créée, première étape déja faite !</h1></Header>
+    <Header>
+        <h1>Maison des ligues: Tous les sports à portée de main !</h1>
+    </Header>
+<main>
+    <div class="presentation" aria-label="presentation">
+       <h1>
+           Prêt(e) pour la compétition ? Cliquez sur le bouton pour commencer !
+       </h1>
+       <p>
+           Tous les mois, profitez de toutes les nouveautés et de toutes les opportunités ! <br>
+           Dès le mois prochain, nous vous proposons tous les événements sportifs sur vos supports préférés.
+       </p>
+    </div>
+    <section id="gallery">
+        <div class="gallery">
+            <ul class="image-list">
+               <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
+               <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
+               <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
+               <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
+               <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
+               <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li> 
+            </ul>    
+        </div>
+    </section>
+    <section id="forms">
+        <div class="form-creation" role="form" aria-labelledby="inscription">
+            <form action="index.html" method="post" id="inscription">
+                <fieldset>
+                    <legend>Créer un compte</legend>
+                    
+                    <label for="nom">
+                        Nom *
+                    </label>
+                    <input 
+                        id="nom"
+                        type="text"
+                        name="nom"
+                        placeholder="Votre nom" 
+                        aria-required="true"
+                        >
+                    
+                    <label for="prenom">
+                        Prénom *
+                    </label>
+                    <input 
+                        id="prenom"
+                        type="text"
+                        name="prenom"
+                        placeholder="Votre prénom" 
+                        aria-required="true"
+                        >
+                    
+                    <label for="email">
+                        Mail *
+                    </label>
+                    <input 
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Saisissez votre Mail" 
+                        aria-required="true"
+                        >
+                
+                    <label for="motdepasse">
+                        Mot de passe *
+                    </label>
+                    <input 
+                        id="motdepasse"
+                        type="password"
+                        name="motdepasse"
+                        placeholder="Saisissez un mot de passe" 
+                        aria-required="true"
+                        >
+                    
+                    <input type="submit" value="VALIDER VOTRE COMPTE">        
+                </form>               
+            </fieldset>
+        </div>
+    </div>      
+
+    </section>
+</main>
+<footer>
+    <p>
+        Pour plus d'informations, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet numquam excepturi unde placeat nihil minima mollitia ullam perspiciatis error vitae! Laboriosam iure vero fugit suscipit quos magnam nulla doloremque amet quasi soluta.
+    </p>
+    <p>@Maison des ligues 2024</p>
+</footer>
 </body>
+
 </html>
