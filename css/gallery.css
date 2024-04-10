@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 colonnes égales */
+    gap: 10px; /* Espacement entre les éléments */
+  }
+  
+  .grid-item {
+    background-color: #f0f0f0; /* Couleur de fond pour l'affichage initial */
+    border: 1px solid #ccc; /* Bordure pour séparer les éléments */
+    height: 150px; /* Hauteur de chaque élément */
+    width: 150px;
+  }
+  

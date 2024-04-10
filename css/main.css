@@ -13,7 +13,7 @@ root {
     width: 100%; 
 }*/
 
-.Header h1{
+.header h1{
     position: fixed;
     margin-top: 0 ;
     align-items: center;
@@ -37,35 +37,6 @@ main{
     margin-top: 8vh;
 }
 
-#gallery {
-    max-width: 1000px; /* Ajustez la largeur selon vos besoins */
-    margin: 0 auto; /* Centre la galerie horizontalement */
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-between; /* Espacement équitable entre les éléments */
-    flex-wrap: wrap; 
-}
-
-.image-list {
-    list-style-type: none; /* Supprime les puces de la liste */
-    padding: 0; /* Supprime le remplissage de la liste */
-    margin: 0; /* Supprime la marge de la liste */
-}
-
-.image-list li {
-    flex-basis: calc(33% - 20px); /* Ajuste la largeur des éléments pour 3 éléments par ligne avec un espacement de 10px entre eux */
-    margin-bottom: 20px; /* Espacement entre les lignes */
-    box-sizing: border-box; /* Inclut les bordures et le remplissage dans la largeur des éléments */
-    padding: 5px; /* Ajoute un remplissage pour éviter que les éléments ne touchent les bords du conteneur */
-    text-align: center;
-}
-
-.image-list li img {
-    width: 100%; /* Assure que les images remplissent complètement l'espace des conteneurs li */
-    height: auto; /* Garantit que les images conservent leurs proportions */
-}
 
 footer{
     background :url(../asset/andres-garcia-wKHIfwOSwqg-unsplash.jpg) center center/ cover fixed;

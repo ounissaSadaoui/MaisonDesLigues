@@ -11,9 +11,9 @@
     <title>Maison des Ligues de Lorraine, by Ounissa</title>
 </head>
 <body>
-    <Header>
+    <header>
         <h1>Maison des ligues: Tous les sports à portée de main !</h1>
-    </Header>
+    </header>
 <main>
     <div class="presentation" aria-label="presentation">
        <h1>
@@ -25,7 +25,7 @@
        </p>
     </div>
     <section id="gallery">
-        <div class="gallery">
+        <!-- <div class="gallery">
             <ul class="image-list">
                <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
                <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
@@ -34,16 +34,45 @@
                <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
                <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li> 
             </ul>    
-        </div>
+        </div> -->
+        <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+
+          </div>
+          
     </section>
     <section id="forms">
+        <div class="boutons">
+            <button id="inscrire">
+                <a href="#form-creation">Je m'inscris</a>
+            </button>
+            <br>
+            <button id="connecter">
+                <a href="#form-connexion">Je me connecte</a>
+            </button>
+
+        </div>
         <div class="form-creation" role="form" aria-labelledby="inscription">
             <form action="index.html" method="post" id="inscription">
                 <fieldset>
                     <legend>Créer un compte</legend>
                     
                     <label for="nom">
-                        Nom *
+                        Nom 
                     </label>
                     <input 
                         id="nom"
@@ -54,7 +83,7 @@
                         >
                     
                     <label for="prenom">
-                        Prénom *
+                        Prénom 
                     </label>
                     <input 
                         id="prenom"
@@ -63,9 +92,28 @@
                         placeholder="Votre prénom" 
                         aria-required="true"
                         >
-                    
+                        <label for="age">
+                            Age 
+                        </label>
+                        <input 
+                            id="age"
+                            type="number"
+                            name="age"
+                            placeholder="Age" 
+                            aria-required="true"
+                            >       
+                            <label for="ville">
+                                Ville 
+                            </label>
+                            <input 
+                                id="ville"
+                                type="text"
+                                name="ville"
+                                placeholder="Saisissez votre ville" 
+                                aria-required="true"
+                                >
                     <label for="email">
-                        Mail *
+                        Mail 
                     </label>
                     <input 
                         id="email"
@@ -76,7 +124,7 @@
                         >
                 
                     <label for="motdepasse">
-                        Mot de passe *
+                        Mot de passe 
                     </label>
                     <input 
                         id="motdepasse"
@@ -85,6 +133,16 @@
                         placeholder="Saisissez un mot de passe" 
                         aria-required="true"
                         >
+                        <label for="image">
+                            Image 
+                        </label>
+                        <input 
+                            id="image"
+                            type="file"
+                            name="image"
+                            placeholder="Charger une image" 
+                            aria-required="true"
+                            >
                     
                     <input type="submit" value="VALIDER VOTRE COMPTE">        
                 </form>               
