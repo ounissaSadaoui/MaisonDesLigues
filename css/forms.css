@@ -1,5 +1,19 @@
 /* style pour les boutons */
+.form-creation{
+    display: none;
+}
 
+.form-connexion {
+    display: none;
+}
+/* le formaulaire ne s'affiche qu'ine fois le "bouton" appuyé */
+.form-creation:target{
+    display: block;
+  }
+
+.form-connexion:target {
+    display: block;
+}
 .boutons {
     background-color: #9B1712ff;
     text-align: center;
@@ -24,7 +38,6 @@ fieldset{
     width: 55%; 
     margin: 0 auto; 
    /* padding-top: 5rem;*/
-    overflow: visible;
 
 }
 form legend {
@@ -76,7 +89,7 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 /* 2ème formuliare */
 /* Styles pour le conteneur du formulaire de connexion */
 #connexion {
-    display: flex;
+ /*   display: flex;*/
     align-items: center;
     justify-content: center;
     height: 100vh;

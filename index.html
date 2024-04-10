@@ -56,17 +56,12 @@
           
     </section>
     <section id="forms">
-        <div class="boutons">
-            <button id="inscrire">
-                <a href="#form-creation">Je m'inscris</a>
-            </button>
-            <br>
-            <button id="connecter">
-                <a href="#form-connexion">Je me connecte</a>
-            </button>
+        <a href="#creation">Je m'inscris</a>
+        <br>
+        <a href="#connexion">Je me connecte</a>
 
-        </div>
-        <div class="form-creation" role="form" aria-labelledby="inscription">
+
+        <div class="form-creation" role="form" aria-labelledby="inscription" id="creation">
             <form action="index.html" method="post" id="inscription">
                 <fieldset>
                     <legend>Créer un compte</legend>
@@ -145,6 +140,47 @@
                             >
                     
                     <input type="submit" value="VALIDER VOTRE COMPTE">        
+                </form>               
+            </fieldset>
+        </div>
+       
+        <div class="form-connexion" role="form" aria-labelledby="connexion_" id="connexion">
+            <form action="index.html" method="post" id="connexion_">
+                <fieldset>
+                    <legend>Je me connecte</legend>
+                    <label for="prenom">
+                        Prénom 
+                    </label>
+                    <input 
+                        id="prenom"
+                        type="text"
+                        name="prenom"
+                        placeholder="Votre prénom" 
+                        aria-required="true"
+                        >
+                        
+                    <label for="email">
+                        Mail 
+                    </label>
+                    <input 
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Saisissez votre Mail" 
+                        aria-required="true"
+                        >
+                
+                    <label for="motdepasse">
+                        Mot de passe 
+                    </label>
+                    <input 
+                        id="motdepasse"
+                        type="password"
+                        name="motdepasse"
+                        placeholder="Saisissez un mot de passe" 
+                        aria-required="true"
+                        >                    
+                    <input type="submit" value="Connexion ">        
                 </form>               
             </fieldset>
         </div>
