@@ -24,7 +24,7 @@
            Dès le mois prochain, nous vous proposons tous les événements sportifs sur vos supports préférés.
        </p>
     </div>
-    <section id="gallery">
+    <div id="gallery">
         <!-- <div class="gallery">
             <ul class="image-list">
                <li> <img src="./asset/lit-torch-composition-close-up.jpg" alt=""></li>
@@ -54,13 +54,11 @@
 
           </div>
           
-    </section>
+        </div>
     <section id="forms">
         <a href="#creation">Je m'inscris</a>
         <br>
         <a href="#connexion">Je me connecte</a>
-
-
         <div class="form-creation" role="form" aria-labelledby="inscription" id="creation">
             <form action="index.html" method="post" id="inscription">
                 <fieldset>
@@ -69,79 +67,36 @@
                     <label for="nom">
                         Nom 
                     </label>
-                    <input 
-                        id="nom"
-                        type="text"
-                        name="nom"
-                        placeholder="Votre nom" 
-                        aria-required="true"
-                        >
+                    <input id="nom" type="text" name="nom" placeholder="Votre nom" aria-required="true">
                     
                     <label for="prenom">
                         Prénom 
                     </label>
-                    <input 
-                        id="prenom"
-                        type="text"
-                        name="prenom"
-                        placeholder="Votre prénom" 
-                        aria-required="true"
-                        >
+                    <input id="prenom" type="text" name="prenom" placeholder="Votre prénom" aria-required="true">
                         <label for="age">
                             Age 
                         </label>
-                        <input 
-                            id="age"
-                            type="number"
-                            name="age"
-                            placeholder="Age" 
-                            aria-required="true"
-                            >       
+                        <input id="age" type="number" name="age" placeholder="Age" aria-required="true">       
                             <label for="ville">
                                 Ville 
                             </label>
-                            <input 
-                                id="ville"
-                                type="text"
-                                name="ville"
-                                placeholder="Saisissez votre ville" 
-                                aria-required="true"
-                                >
+                            <input id="ville" type="text" name="ville" placeholder="Saisissez votre ville" aria-required="true">
                     <label for="email">
                         Mail 
                     </label>
-                    <input 
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Saisissez votre Mail" 
-                        aria-required="true"
-                        >
+                    <input id="email" type="email" name="email" placeholder="Saisissez votre Mail" aria-required="true">
                 
                     <label for="motdepasse">
                         Mot de passe 
                     </label>
-                    <input 
-                        id="motdepasse"
-                        type="password"
-                        name="motdepasse"
-                        placeholder="Saisissez un mot de passe" 
-                        aria-required="true"
-                        >
+                    <input id="motdepasse" type="password" name="motdepasse" placeholder="Saisissez un mot de passe" aria-required="true">
                         <label for="image">
                             Image 
                         </label>
-                        <input 
-                            id="image"
-                            type="file"
-                            name="image"
-                            placeholder="Charger une image" 
-                            aria-required="true"
-                            >
-                    
+                        <input id="image" type="file" name="image" aria-required="true">
                     <input type="submit" value="VALIDER VOTRE COMPTE">        
-                </form>               
             </fieldset>
+        </form>               
         </div>
        
         <div class="form-connexion" role="form" aria-labelledby="connexion_" id="connexion">
@@ -151,41 +106,21 @@
                     <label for="prenom">
                         Prénom 
                     </label>
-                    <input 
-                        id="prenom"
-                        type="text"
-                        name="prenom"
-                        placeholder="Votre prénom" 
-                        aria-required="true"
-                        >
+                    <input id="prenom_connexion" type="text" name="prenom" placeholder="Votre prénom" aria-required="true">
                         
                     <label for="email">
                         Mail 
                     </label>
-                    <input 
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Saisissez votre Mail" 
-                        aria-required="true"
-                        >
+                    <input  id="email_connexion" type="email"  name="email"  placeholder="Saisissez votre Mail" aria-required="true">
                 
                     <label for="motdepasse">
                         Mot de passe 
                     </label>
-                    <input 
-                        id="motdepasse"
-                        type="password"
-                        name="motdepasse"
-                        placeholder="Saisissez un mot de passe" 
-                        aria-required="true"
-                        >                    
+                    <input  id="motdepasse_connexion" type="password" name="motdepasse" placeholder="Saisissez un mot de passe" aria-required="true">                    
                     <input type="submit" value="Connexion ">        
-                </form>               
             </fieldset>
+        </form>               
         </div>
-    </div>      
-
     </section>
 </main>
 <footer>

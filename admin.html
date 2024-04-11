@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site ligue de tous les sports, pour la maison des ligues de Lorraine">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="manifest" href="./favicon/site.webmanifest">    
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <title>Maison des Ligues de Lorraine, by Ounissa</title>
+</head>
+<body>
+    <header>
+        <h1>Maison des ligues: Tous les sports à portée de main ! Admin</h1>
+    </header>
+<main>
+    <section id="administration" aria-labelledby="administration">
+       <h3>Modifier ou supprimer un membre</h3>
+       <ul id="administration">
+        <li>Nom</li>
+        <li>Prenom</li>
+        <li>Age</li>
+        <li>Ville</li>
+        <li>Mail</li>
+        <li>Photo <img src="./asset/20240106_160554.jpg" alt="image insérée par le membre"></li>
+      </ul>
+    </section>
+    <section id="modification" aria-labelledby="modification">
+        <div class="form-creation" role="form" aria-labelledby="inscription" id="creation">
+            <form action="index.html" method="post" id="inscription">
+                <fieldset>
+                    <legend>Créer un compte</legend>
+                    
+                    <label for="nom">
+                        Nom 
+                    </label>
+                    <input id="nom" type="text" name="nom" placeholder="Votre nom" aria-required="true">
+                    
+                    <label for="prenom">
+                        Prénom 
+                    </label>
+                    <input id="prenom" type="text" name="prenom" placeholder="Votre prénom" aria-required="true">
+                        <label for="age">
+                            Age 
+                        </label>
+                        <input id="age" type="number" name="age" placeholder="Age" aria-required="true">       
+                            <label for="ville">
+                                Ville 
+                            </label>
+                            <input id="ville" type="text" name="ville" placeholder="Saisissez votre ville" aria-required="true">
+                    <label for="email">
+                        Mail 
+                    </label>
+                    <input id="email" type="email" name="email" placeholder="Saisissez votre Mail" aria-required="true">
+                
+                    <label for="motdepasse">
+                        Mot de passe 
+                    </label>
+                    <input id="motdepasse" type="password" name="motdepasse" placeholder="Saisissez un mot de passe" aria-required="true">
+                        <label for="image">
+                            Image 
+                        </label>
+                        <input id="image" type="file" name="image" aria-required="true">
+                    <input type="submit" value="VALIDER VOTRE COMPTE">        
+            </fieldset>
+        </form>               
+        </div>
+
+        </div>
+    </section>
+
+</main>
+<footer>
+    <p>
+        Pour plus d'informations, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet numquam excepturi unde placeat nihil minima mollitia ullam perspiciatis error vitae! Laboriosam iure vero fugit suscipit quos magnam nulla doloremque amet quasi soluta.
+    </p>
+    <p>@Maison des ligues 2024</p>
+</footer>
+</body>
+</html>
