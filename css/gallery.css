@@ -1,13 +1,43 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 4 colonnes égales */
+    grid-template-columns: repeat(3, 1fr); /* 4 colonnes égales */
     gap: 10px; /* Espacement entre les éléments */
   }
   
-  .grid-item {
-    background-color: #f0f0f0; /* Couleur de fond pour l'affichage initial */
+  .grid-item {  
+    background-color: black; /* Couleur de fond pour l'affichage initial */
     border: 1px solid #ccc; /* Bordure pour séparer les éléments */
-    height: 150px; /* Hauteur de chaque élément */
-    width: 150px;
+    height: 5rem;
+    width: 80%;
   }
-  
+  .image-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 colonnes égales */
+
+  }
+
+  /* css pour les boutons */
+  #boutons {
+    display: flex;
+    flex-direction: column; 
+}
+
+.inscrire,
+.connecter {
+    display: block;
+    width: 20rem; 
+    height: 5rem; 
+    margin-bottom: 2rem; 
+    text-align: center;
+    line-height: 5rem; 
+    background-color: #F5C000ff; /* Couleur orange jolie */
+    color: #ffffff; 
+    border: none; 
+    border-radius: .5rem; 
+    text-decoration: none; 
+    font-size: 16px; 
+}
+.inscrire:hover,
+.connecter:hover {
+    background-color: #FF8C00; 
+}

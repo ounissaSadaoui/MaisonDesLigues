@@ -6,7 +6,7 @@
 .form-connexion {
     display: none;
 }
-/* le formaulaire ne s'affiche qu'ine fois le "bouton" appuyé */
+/* le formaulaire ne s'affiche qu'une fois le "bouton" appuyé */
 .form-creation:target{
     display: block;
   }
@@ -14,13 +14,10 @@
 .form-connexion:target {
     display: block;
 }
-.boutons {
-    background-color: #9B1712ff;
-    text-align: center;
-    max-width: 30rem;
-}
 
-#connecter , #inscrire {
+.connecter  {
+    grid-column: 2;
+    grid-row: 4;
     margin-top: 5rem;
     margin-bottom: 5rem ;
     justify-content: space-between;
