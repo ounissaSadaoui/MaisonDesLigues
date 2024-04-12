@@ -3,15 +3,7 @@
 @import url("gallery.css");
 @import url("forms.css");
 @import url("admin.css");
-
-
-
-
-
-@font-face {
-    font-family: 'Supernatural_Knight';
-    src: url(./font/Supernatural_Knight.ttf);
-  }
+@import url("fonts.css");
   
 html{
     font-size: 62.5%;
@@ -19,7 +11,7 @@ html{
 }
 
 body{
-    font: 'Supernatural_Knight' 1.6rem sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     line-height: 1.6rem;
     letter-spacing: .1rem;
@@ -53,10 +45,4 @@ button {
   border: 0;
   font-size: inherit;
   cursor: pointer;
-}
-
-:root{
-    --peach-forBG: #E2AE87;
-    --grey-forBG:#999987 ;
-    --night-black: rgb(53, 49, 49) ; 
 }

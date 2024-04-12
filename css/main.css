@@ -1,21 +1,17 @@
-body{
-    background :url(../asset/image.jpg) center center/ cover fixed;
+.presentation{
+    background :url(../asset/joparis2024.jpeg) center center/ cover fixed;
+    height: 90vh;
+    margin-top: 10vh;
+    border: .1rem solid #282727;
   } 
 
-root {
-    --prussian-blue: #1A2C40ff;
-    --rusty-red: #DC2A3Dff;
-    --celestial-blue: #009AEAff;
-    --forest-green: #018F14ff;
-    --mikado-yellow: #F5C000ff;
-}
-/* Header > h1{
-    height: 8vh;
-    position: fixed;
-    margin-top: 0rem;
-    background-color: #02843Eff;
-    width: 100%; 
-}*/
+  .presentation h1, p {
+    margin-top: 6vh;
+    background-color: rgba(220, 42, 61, 0.5);
+    max-width: 50%;
+    
+  }
+
 header{
     margin-top: 0 ;
     top: 0rem;
@@ -32,21 +28,41 @@ header{
 .header h1{
     color: #000000; 
     max-height: 10vh;
-    font-weight: 300;
     border: .1rem solid #282727;
     text-shadow: 1px 1px 2px rgb(42, 40, 40);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+header img {
+    vertical-align: middle; 
+    margin-right: 10px; 
+    max-width: 48px;
+}
+#separateur {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: rgba(0, 154, 234, 0.5); 
+    max-height: 9vh; 
+    max-width: 70%;
+    overflow:hidden; 
+}
+.galley_separatrice {
+    display: flex; 
+    align-items: center;
+    text-align: center;
+    justify-content: center; 
 }
 
-.presentation{
-    margin-top: 25vh;
-    margin-bottom: 25vh;
-    position: relative;
-    background-color:rgba(220, 42, 61, 0.5);
-    border: .1rem solid #282727;
-    max-width: 80%;
-
+.galley_separatrice li {
+    margin: auto; 
+    max-width: fit-content;
 }
-
+.galley_separatrice img{
+    max-width: 32px; 
+    height: auto; 
+    padding: auto;
+}
 footer{
     background :url(../asset/andres-garcia-wKHIfwOSwqg-unsplash.jpg) center center/ cover fixed;
     margin-bottom: 0;

@@ -20,3 +20,6 @@ flamme
 
 attribution de l'icone utilisée en favicon
 <a href="https://www.flaticon.com/fr/icones-gratuites/jeux-olympiques" title="jeux olympiques icônes">Jeux olympiques icônes créées par Prosymbols Premium - Flaticon</a>
+
+l'icone du titre 
+<a href="https://www.flaticon.com/free-icons/olympic-games" title="olympic games icons">Olympic games icons created by pongsakornRed - Flaticon</a>
