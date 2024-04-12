@@ -1,26 +1,29 @@
+/* #forms {
+margin-bottom: 3rem;
+}
 /* style pour les boutons */
-.form-creation{
+
+/* .form-creation{
     display: none;
 }
 
 .form-connexion {
     display: none;
-}
+} */
 /* le formaulaire ne s'affiche qu'une fois le "bouton" appuyé */
-.form-creation:target{
+/* .form-creation:target{
     display: block;
   }
 
 .form-connexion:target {
     display: block;
-}
+}  */ 
 
-.connecter  {
+.connecter, .inscrire  {
     grid-column: 2;
     grid-row: 4;
-    margin-top: 5rem;
-    margin-bottom: 5rem ;
     justify-content: space-between;
+    margin: 2rem auto 2rem auto;
 }
 /* Styles pour le conteneur du formulaire */
 #create{
@@ -34,11 +37,23 @@ fieldset{
 .form-creation {
     width: 55%; 
     margin: 0 auto; 
-   /* padding-top: 5rem;*/
+    height: 15vh;
+    margin-bottom: calc(100vh - (15 + 15 + 10));
+
+
+}
+
+.form-connexion {
+    width: 55%; 
+    margin: 0 auto; 
+    height: 15vh;
+    margin-bottom: calc(100vh - (15 + 15 + 10));
 
 }
 form legend {
-    font-size: larger;
+    font-size: x-large;
+    color: #1A2C40ff;
+    font-weight: 300;
 }
 /* Styles pour le fieldset */
 .form-creation fieldset {
@@ -74,7 +89,7 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
     width: max-content;
     height: 3.7rem;
     text-align: center;
-    background-color:#2753ce;
+    background-color:#1A2C40ff;
     display: block;
     margin: auto;
     padding: 1rem;
@@ -96,7 +111,7 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 /* Styles pour le fieldset du formulaire de connexion */
 #connexion fieldset {
     padding-top: 3rem; 
-    padding-bottom: 3rem; 
+    /* padding-bottom: 3rem;  */
     padding-right: 1rem; 
     padding-left: 1rem; 
     margin: 1rem 0; 
@@ -111,7 +126,7 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 
 /* Styles pour le bouton de soumission du formulaire de connexion */
 #connexion input[type="submit"] {
-    background-color: #2753ce; 
+    background-color: #1A2C40ff; 
     color: white; /* Texte en blanc */
     border: none;
     padding: 10px 20px;
@@ -129,11 +144,47 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 }
 
 .inner-form fieldset{
-    border: 1rem light #e6dfdf; 
+    border: 1rem light #F5C000ff; 
     padding-top: 3rem; 
-    padding-bottom: 3rem; 
+    /* padding-bottom: 3rem;  */
     padding-right: 1rem; 
     padding-left: 1rem; 
     margin: 1rem 0; 
     border-radius: 3rem;
 }
+
+/*testeur */
+#forms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: start;
+}
+
+#boutons {
+    grid-column: span 2;
+}
+
+.form-creation, .form-connexion {
+    display: none;
+}
+.form-creation:target{
+    display: block;
+  }
+
+.form-connexion:target {
+    display: block;
+}  
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+footer{
+    height: 10vh;
+    background :url(../asset/andres-garcia-wKHIfwOSwqg-unsplash.jpg) center center/ cover fixed;
+    margin-top: calc(100vh - (15 + 15 + 10));
+    bottom: 0;
+    }
