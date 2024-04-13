@@ -1,5 +1,4 @@
 #gallery {
-  max-height: 180vh;
   max-width: 80%;
 }
 .grid-container {
@@ -40,7 +39,8 @@
     border: none; 
     border-radius: .5rem; 
     text-decoration: none; 
-    font-size: 16px; 
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 .inscrire:hover,
 .connecter:hover {

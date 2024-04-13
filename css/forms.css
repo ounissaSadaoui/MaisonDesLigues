@@ -1,6 +1,9 @@
-/* #forms {
-margin-bottom: 3rem;
+#forms {
+align-items: center;
+margin: auto;
 }
+
+
 /* style pour les boutons */
 
 /* .form-creation{
@@ -27,9 +30,8 @@ margin-bottom: 3rem;
 }
 /* Styles pour le conteneur du formulaire */
 #create{
-    height: 90vh;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
 }
 fieldset{
     border-color: #afabab;
@@ -37,18 +39,11 @@ fieldset{
 .form-creation {
     width: 55%; 
     margin: 0 auto; 
-    height: 15vh;
-    margin-bottom: calc(100vh - (15 + 15 + 10));
-
-
 }
 
 .form-connexion {
     width: 55%; 
     margin: 0 auto; 
-    height: 15vh;
-    margin-bottom: calc(100vh - (15 + 15 + 10));
-
 }
 form legend {
     font-size: x-large;
@@ -100,13 +95,12 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 
 /* 2ème formuliare */
 /* Styles pour le conteneur du formulaire de connexion */
-#connexion {
- /*   display: flex;*/
+/*#connexion {
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
-
+*/
 
 /* Styles pour le fieldset du formulaire de connexion */
 #connexion fieldset {
@@ -153,14 +147,6 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
     border-radius: 3rem;
 }
 
-/*testeur */
-#forms {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    align-items: start;
-}
-
 #boutons {
     grid-column: span 2;
 }
@@ -175,16 +161,3 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 .form-connexion:target {
     display: block;
 }  
-
-.footer-fixed {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-footer{
-    height: 10vh;
-    background :url(../asset/andres-garcia-wKHIfwOSwqg-unsplash.jpg) center center/ cover fixed;
-    margin-top: calc(100vh - (15 + 15 + 10));
-    bottom: 0;
-    }
