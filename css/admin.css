@@ -1,9 +1,8 @@
-#administration{
-    margin-top: 25vh;
-    position: relative;
-    background-color: rgba(1, 143, 20, 0.5);
+#modification{
+background-color: aquamarine;
 }
-img{
-    max-width: 700px;
-    max-height: 1000px;
+
+#administration img{
+    width: 2rem;
+    height: 4rem;
 }

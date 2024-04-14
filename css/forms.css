@@ -3,25 +3,6 @@ align-items: center;
 margin: auto;
 }
 
-
-/* style pour les boutons */
-
-/* .form-creation{
-    display: none;
-}
-
-.form-connexion {
-    display: none;
-} */
-/* le formaulaire ne s'affiche qu'une fois le "bouton" appuyé */
-/* .form-creation:target{
-    display: block;
-  }
-
-.form-connexion:target {
-    display: block;
-}  */ 
-
 .connecter, .inscrire  {
     grid-column: 2;
     grid-row: 4;
@@ -92,15 +73,6 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 
 
 }
-
-/* 2ème formuliare */
-/* Styles pour le conteneur du formulaire de connexion */
-/*#connexion {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-*/
 
 /* Styles pour le fieldset du formulaire de connexion */
 #connexion fieldset {

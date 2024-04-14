@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site ligue de tous les sports, pour la maison des ligues de Lorraine">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="manifest" href="./favicon/site.webmanifest">    
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <!--liens favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Maison des Ligues de Lorraine, by Ounissa</title>
 </head>
 <body>
     <header>
-        <h1>Maison des ligues: Tous les sports à portée de main ! Admin</h1>
+        <h1><img src="./asset/olympic-games.png" alt="logo flamme olypmique et anneaux" aria-hidden="true"></a>Maison des ligues: Tous les sports à portée de main !</h1>
     </header>
 <main>
-    <section id="administration" aria-labelledby="administration">
-       <h3>Modifier ou supprimer un membre</h3>
+    <div class="presentation" aria-labelledby="administration">
+    <h1>Page d'administration</h1></h1>
+    <div class="navigation">
+        <a href="#forms" style="text-decoration: none;" id="commencer">
+           <i class="fa-solid fa-user fa-beat fa-lg" style="color: #000000; margin-right: 5px;"></i>
+             Gérer les inscrits
+        </a>
+        <a href="#separateur" style="text-decoration: none;" id="commencer">
+          <i class="fa-solid fa-receipt fa-beat fa-lg" style="color: #000000;  margin-right: 5px;"></i>
+          Gérer les posts
+       </a>
+     </div>
+    </div>
+    <div>
+       <h3>Liste des membres : </h3>
        <ul id="administration">
         <li>Nom</li>
         <li>Prenom</li>
@@ -25,12 +46,12 @@
         <li>Mail</li>
         <li>Photo <img src="./asset/20240106_160554.jpg" alt="image insérée par le membre"></li>
       </ul>
-    </section>
+    </div>
     <section id="modification" aria-labelledby="modification">
-        <div class="form-creation" role="form" aria-labelledby="inscription" id="creation">
+        <div class="form-create" role="form" aria-labelledby="inscription" id="creation">
             <form action="index.html" method="post" id="inscription">
                 <fieldset>
-                    <legend>Créer un compte</legend>
+                    <legend>Modifier un compte</legend>
                     
                     <label for="nom">
                         Nom 

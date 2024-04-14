@@ -1,0 +1,125 @@
+header{
+    margin-top: 0 ;
+    top: 0rem;
+    position: fixed;
+    background-color:rgba(1, 143, 20, 0.5) ;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    box-shadow: 0 .8rem 0.8rem rgb(155, 154, 154);
+    height: 10vh;
+    margin-top: 0;
+}
+
+.header h1{
+    color: #000000; 
+    max-height: 10vh;
+    border: .1rem solid #282727;
+    text-shadow: 1px 1px 2px rgb(42, 40, 40);
+   
+}
+header img {
+    vertical-align: middle; 
+    margin-right: 1rem; 
+    max-width: 4.8rem;
+}
+.presentation{
+    background :url(../asset/joparis2024.jpeg) center center/ cover fixed;
+    height: 90vh;
+    margin-top: 10vh;
+    border: .1rem solid #282727;
+   /* background-color: rgba(220, 42, 61, 0.5);*/
+
+  } 
+
+  .presentation h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+    font-style:  italic;
+    line-height: 4rem;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  .presentation p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    font-style: normal;
+    line-height: 2rem;
+    margin: auto;
+    border-bottom: 3rem;
+
+  }
+  .presentation h1 , .presentation p  {
+    background-color: rgb(245, 192, 0, 0.5);
+    max-width: 50%; 
+    border-radius: 3rem;
+
+  }
+    .navigation {
+        position: absolute ;
+        bottom: 40%;
+        right: 3rem;
+    }
+
+
+.presentation a {
+    color: #000000;
+    font-weight: 500;
+    font-size: large;
+    background-color: rgba(220, 42, 61, 0.5);
+    padding: 1.5rem;
+    border-radius: 3rem;
+    margin-right: 2.5rem;
+    margin-bottom: 5rem;
+}
+.presentation a:hover {
+    font-size: 210%;
+}
+
+#commencer:hover {
+    transform: scale(1.1); /* Augmente la taille de 10% */
+}
+
+#separateur {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: rgba(0, 154, 234, 0.5); 
+    max-height: 9vh; 
+    max-width: 70%;
+    overflow:hidden; 
+}
+.galley_separatrice {
+    display: flex; 
+    align-items: center;
+    text-align: center;
+    justify-content: center; 
+}
+
+.galley_separatrice li {
+    margin: auto; 
+    max-width: fit-content;
+}
+.galley_separatrice img{
+    max-width: 3.2rem; 
+    height: auto; 
+    padding: auto;
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer{
+    height: 10vh;
+    background :url(../asset/andres-garcia-wKHIfwOSwqg-unsplash.jpg) center center/ cover fixed;
+    bottom: 0;
+    }
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
