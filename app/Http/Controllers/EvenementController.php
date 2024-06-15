@@ -58,6 +58,7 @@ class EvenementController extends Controller
          $evenement->save();
     // Redirection après enregistrement
     return redirect(route('evenement.index'));
+    
 }
 
 

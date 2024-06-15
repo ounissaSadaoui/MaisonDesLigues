@@ -26,6 +26,7 @@
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <x-primary-button class="mt-4">{{ __('Enregistrer') }}</x-primary-button>
         </form>
+        
         <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
 
             @foreach ($evenements as $evenement)
