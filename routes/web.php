@@ -16,7 +16,13 @@ use Illuminate\Http\Response;
 |
 */
 
-Route::get('/dashboard', [EvenementController::class, 'index'])
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+
+*/
+Route::get('/', [EvenementController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 

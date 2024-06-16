@@ -18,30 +18,47 @@ Dès le mois prochain, nous vous proposons tous les événements sportifs sur vo
                     </div>
                 </div>            
             </div>
+            <div class="ml-auto mt-4 mr-8 flex flex-col items-end" style="width: 20rem;">
+                <a href="#connexion" class="block mb-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded w-full text-center">
+                    Visualiser
+                </a>
+                <a href="#evenements" class="block bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
+                    Commencer
+                </a>
+            </div>
         </div>
-        <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
+    </div>
+    <div class="header-bg" id="connexion">
+        {{ __("Liste des évenements :") }}
+    </div>
+    <div id="evenements" class="mt-6 bg-white shadow-sm rounded-lg">
+        <div class="grid-container">
             @foreach ($evenements as $evenement)
-                <div class="p-6 flex space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-gray-800">{{ $evenement->user->name }}</span>
-                                <small class="ml-2 text-sm text-gray-600">{{ $evenement->created_at->format('j M Y, g:i a') }}</small>
-                            </div>
-                        </div>
-                        <p class="mt-4 text-lg text-gray-900">{{ $evenement->Nom }} :</p> 
-                        <p class="mt-4 text text-gray-700">{{ $evenement->Evenement }}</p>
+                <div class="event-item">
+                    <div class="event-title">
+                        {{ $evenement->Nom.' ('.$evenement->user->name.')' }}
+                    </div>
+                    <div class="event-image">
                         @if ($evenement->Image)
-                            <div class="mt-4">
-                                <img src="{{ asset('storage/' . $evenement->Image) }}" alt="Image de l'événement" class="w-full h-auto rounded-lg">
-                            </div>
+                            <img src="{{ asset('storage/' . $evenement->Image) }}" alt="Image de l'événement">
                         @endif
+                    </div>
+                    <div class="event-description">
+                        {{ $evenement->Evenement }}
+                    </div>
+                    <div class="event-date">
+                        <small>{{ $evenement->created_at->format('j M Y, g:i a') }}</small>
                     </div>
                 </div>
             @endforeach
         </div>
+    </div>
+    <div class="flex items-center justify-center">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
+            S'inscrire
+        </button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            Se connecter
+        </button>
     </div>
 </x-app-layout>
