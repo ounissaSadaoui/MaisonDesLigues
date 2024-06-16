@@ -14,10 +14,8 @@ class EvenementController extends Controller
      */
     public function index(): View
     {
-        return view('evenement', [
-
+        return view('dashboard', [
             'evenements' => Evenement::with('user')->latest()->get(),
-
         ]);
     }
 

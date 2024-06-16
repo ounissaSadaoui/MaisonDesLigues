@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --bleu-f: #1A2C4080;
+    --rouge: #DC2A3D80;
+    --bleu-c: #009AEA80;
+    --vert: #018F1480;
+    --jaune: #F5C00080;
+    --orange : #F5C000ff;
+
+}
+
+.body-bg {
+    background-image: url('joparis2024.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.header-bg {
+    background-color: var(--vert);
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: larger; 
+    }
