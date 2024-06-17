@@ -51,5 +51,12 @@ Route::middleware('auth')->group(function () {
     Route::resource('evenement', EvenementController::class)
         ->only(['index', 'create', 'store'])
         ->middleware(['auth', 'verified']);
+    });
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', function () {
+         return view('admin'); 
+    })->name('admin');
 });
+
 require __DIR__.'/auth.php';
