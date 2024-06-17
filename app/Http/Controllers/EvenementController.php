@@ -12,12 +12,31 @@ class EvenementController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     public function dashboard(): View
+    {
+        $evenements = Evenement::with('user')->latest()->get();
+        return view('dashboard', compact('evenements'));
+    }
+
+    public function admin(): View
+    {
+        $evenements = Evenement::with('user')->latest()->get();
+        return view('admin', compact('evenements'));
+    }
     public function index(): View
     {
-    /*return view('evenement'); */
-        return view('dashboard', [
+    /*return view('evenement'); 
+        return view('dashboard',  [
             'evenements' => Evenement::with('user')->latest()->get(),
         ]);
+      //  return view('admin', compact('evenements'));
+        return view('admin',  [
+            'evenements' => Evenement::with('user')->latest()->get(),
+        ]);
+        return view('dashboard',  [
+            'evenements' => Evenement::with('user')->latest()->get(),
+        ]);*/
     }
 
     /**
@@ -25,7 +44,9 @@ class EvenementController extends Controller
      */
     public function create()
     {
-        return view('evenement');    }
+        return views('evenement');    
+    }
+
 
     /**
      * Store a newly created resource in storage.

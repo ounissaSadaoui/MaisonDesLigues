@@ -31,5 +31,27 @@
     <div class="header-bg mt-5" id="connexion">
         {{ __("Liste des évenements :") }}
     </div>
+    <div id="evenements" class="mt-6 bg-white shadow-sm rounded-lg">
+        <div class="grid-container">
+            @foreach ($evenements as $evenement)
+                <div class="event-item">
+                    <div class="event-title">
+                        {{ $evenement->Nom.' ('.$evenement->user->name.')' }}
+                    </div>
+                    <div class="event-image">
+                        @if ($evenement->Image)
+                            <img src="{{ asset('storage/' . $evenement->Image) }}" alt="Image de l'événement">
+                        @endif
+                    </div>
+                    <div class="event-description">
+                        {{ $evenement->Evenement }}
+                    </div>
+                    <div class="event-date">
+                        <small>{{ $evenement->created_at->format('j M Y, g:i a') }}</small>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
   
 </x-app-layout>

@@ -53,10 +53,15 @@ Route::middleware('auth')->group(function () {
         ->middleware(['auth', 'verified']);
     });
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', function () {
-         return view('admin'); 
-    })->name('admin');
-});
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/', [EvenementController::class, 'dashboard'])->name('dashboard');
+        
+        Route::resource('evenement', EvenementController::class)
+            ->only(['index', 'create', 'store']);
+        
+        Route::middleware('admin')->prefix('admin')->group(function () {
+            Route::get('/', [EvenementController::class, 'admin'])->name('admin.dashboard');
+        });
+    });
 
 require __DIR__.'/auth.php';
