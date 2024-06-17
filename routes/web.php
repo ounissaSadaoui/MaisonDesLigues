@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Response; 
 
@@ -64,4 +65,18 @@ Route::middleware('auth')->group(function () {
         });
     });
 
+    //route pour recup mes users:
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users.index');
+    });
+    
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::get('/admin/dashboard', [EvenementController::class, 'admin'])->name('admin.dashboard');
+});
+
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [EvenementController::class, 'admin'])->name('admin.dashboard');
+    Route::delete('/admin/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
+});
 require __DIR__.'/auth.php';

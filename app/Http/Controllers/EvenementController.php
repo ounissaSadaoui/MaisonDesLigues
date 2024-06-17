@@ -6,6 +6,7 @@ use App\Models\Evenement;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response; 
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Redirect;
 
 class EvenementController extends Controller
 {
@@ -19,24 +20,14 @@ class EvenementController extends Controller
         return view('dashboard', compact('evenements'));
     }
 
-    public function admin(): View
+     public function admin(): View
     {
         $evenements = Evenement::with('user')->latest()->get();
         return view('admin', compact('evenements'));
-    }
+    }   
     public function index(): View
     {
-    /*return view('evenement'); 
-        return view('dashboard',  [
-            'evenements' => Evenement::with('user')->latest()->get(),
-        ]);
-      //  return view('admin', compact('evenements'));
-        return view('admin',  [
-            'evenements' => Evenement::with('user')->latest()->get(),
-        ]);
-        return view('dashboard',  [
-            'evenements' => Evenement::with('user')->latest()->get(),
-        ]);*/
+             //
     }
 
     /**
@@ -46,7 +37,6 @@ class EvenementController extends Controller
     {
         return views('evenement');    
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -79,7 +69,6 @@ class EvenementController extends Controller
     return redirect()->route('evenement.index')->with('success', 'Événement créé avec succès.');    
 }
 
-
     /**
      * Display the specified resource.
      */
@@ -111,4 +100,15 @@ class EvenementController extends Controller
     {
         //
     }
+    public function bulkDelete(Request $request)
+{
+    $validated = $request->validate([
+        'selected_evenements' => 'required|array',
+        'selected_evenements.*' => 'integer',
+    ]);
+
+    Evenement::whereIn('id', $validated['selected_evenements'])->delete();
+
+    return redirect()->route('admin.dashboard')->with('success', 'Événements supprimés avec succès.');
+}
 }
