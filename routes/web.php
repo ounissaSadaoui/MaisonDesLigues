@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
 });
 
 // Routes de gestion des événements
-Route::resource('evenement', EvenementController::class)
+Route::resource('/evenement', EvenementController::class)
     ->only(['index', 'store']) // Seuls les méthodes index et store sont accessibles
     ->middleware(['auth', 'verified']);
 
