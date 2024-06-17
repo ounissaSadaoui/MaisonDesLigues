@@ -80,8 +80,17 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('/admin/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
 });
 
-//gestion des users
-Route::middleware('admin')->prefix('admin')->group(function () {
-    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+//gestion des users mise à jour
+/*
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users.index');
+    Route::patch('/admin/users/{id}', [UserController::class, 'update'])->name('admin.users.update');
+});*/
+
+//supression des users
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users.index');
+    Route::delete('/admin/users', [UserController::class, 'destroy'])->name('admin.users.destroy');
 });
 require __DIR__.'/auth.php';
