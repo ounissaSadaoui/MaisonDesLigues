@@ -74,9 +74,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/admin/dashboard', [EvenementController::class, 'admin'])->name('admin.dashboard');
 });
 
-
+//suppression des evebts
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/dashboard', [EvenementController::class, 'admin'])->name('admin.dashboard');
     Route::delete('/admin/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
+});
+
+//gestion des users
+Route::middleware('admin')->prefix('admin')->group(function () {
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
 });
 require __DIR__.'/auth.php';
