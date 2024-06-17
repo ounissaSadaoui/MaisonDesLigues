@@ -19,10 +19,10 @@ Dès le mois prochain, nous vous proposons tous les événements sportifs sur vo
                 </div>            
             </div>
             <div class="ml-auto mt-4 mr-8 flex flex-col items-end" style="width: 20rem;">
-                <a href="#connexion" class="block mb-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded w-full text-center">
+                <a href="#connexion" class="block mb-2 bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
                     Visualiser
                 </a>
-                <a href="#evenements" class="block bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
+                <a href="{{ route('evenement.create') }}"  class="block bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
                     Commencer
                 </a>
             </div>
@@ -53,6 +53,7 @@ Dès le mois prochain, nous vous proposons tous les événements sportifs sur vo
             @endforeach
         </div>
     </div>
+    <!--
     <div class="flex items-center justify-center">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
             S'inscrire
@@ -60,5 +61,5 @@ Dès le mois prochain, nous vous proposons tous les événements sportifs sur vo
         <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
             Se connecter
         </button>
-    </div>
+    </div>-->
 </x-app-layout>

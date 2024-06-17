@@ -14,6 +14,7 @@ class EvenementController extends Controller
      */
     public function index(): View
     {
+    /*return view('evenement'); */
         return view('dashboard', [
             'evenements' => Evenement::with('user')->latest()->get(),
         ]);
@@ -24,8 +25,7 @@ class EvenementController extends Controller
      */
     public function create()
     {
-        //
-    }
+        return view('evenement');    }
 
     /**
      * Store a newly created resource in storage.
@@ -55,8 +55,7 @@ class EvenementController extends Controller
          $evenement->user_id = $request->user()->id;
          $evenement->save();
     // Redirection après enregistrement
-    return redirect(route('evenement.index'));
-    
+    return redirect()->route('evenement.index')->with('success', 'Événement créé avec succès.');    
 }
 
 

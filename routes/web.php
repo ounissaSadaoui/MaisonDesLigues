@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-*/
+
 Route::get('/', [EvenementController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -36,5 +36,20 @@ Route::middleware('auth')->group(function () {
 Route::resource('/evenement', EvenementController::class)
     ->only(['index', 'store']) // Seuls les méthodes index et store sont accessibles
     ->middleware(['auth', 'verified']);
+*/
 
+Route::get('/', [EvenementController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    // Routes de gestion des événements
+    Route::resource('evenement', EvenementController::class)
+        ->only(['index', 'create', 'store'])
+        ->middleware(['auth', 'verified']);
+});
 require __DIR__.'/auth.php';

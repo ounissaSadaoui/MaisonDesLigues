@@ -9,6 +9,7 @@
     --vert: #018F1480;
     --jaune: #F5C00080;
     --orange : #F5C000ff;
+    --black : 'black';
 
 }
 
@@ -31,6 +32,9 @@
     font-size: larger; 
     }
 
+    /* style pour affichage des évenements */
+
+    
     #gallery {
         max-width: 80%;
         margin: auto;
@@ -85,3 +89,17 @@
         border-radius: 0.5rem;
         margin-top: 0.5rem;
     }
+
+    /* style pour le text evenemet */
+
+    .custom-textarea, .custom-input {
+        background-color: var(--bleu-c);
+        color: var(--white);
+        border: 1px solid var(--bleu-c);
+    }
+    
+    .custom-textarea::placeholder, .custom-input::placeholder {
+        color: var(--black);
+        opacity: 0.6; 
+    }
+    
