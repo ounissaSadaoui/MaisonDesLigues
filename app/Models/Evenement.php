@@ -14,6 +14,7 @@ class Evenement extends Model
         'Evenement',
         'Nom',
         'Image',
+        'Note',
         'user_id'
 
     ];

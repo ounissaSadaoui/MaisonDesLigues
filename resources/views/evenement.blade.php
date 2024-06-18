@@ -17,6 +17,13 @@
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm custom-textarea"
             >{{ old('Evenement') }}</textarea>
 
+            <label for="note" class="mb-2 mt-2 block font-medium text-2xl text-black-800">{{ __('Commentaire de l\'évenement :') }}</label>
+            <textarea
+                name="note"
+                placeholder="{{ __('Commentaire') }}"
+                class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm custom-textarea"
+            >{{ old('note') }}</textarea>
+
             <label for="Image" class="mb-2 mt-2 block font-medium text-2xl text-black-800">{{ __('Image de l\'évenement') }}</label>
             <input
                 type="file"

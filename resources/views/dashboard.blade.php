@@ -40,6 +40,9 @@ Dès le mois prochain, nous vous proposons tous les événements sportifs sur vo
                     <div class="event-description">
                         {{ $evenement->Evenement }}
                     </div>
+                    <div class="event-note">
+                        {{ $evenement->note }}
+                    </div>
                     <div class="event-date">
                         <small>{{ $evenement->created_at->format('j M Y, g:i a') }}</small>
                     </div>

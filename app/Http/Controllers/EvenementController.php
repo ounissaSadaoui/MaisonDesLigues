@@ -26,7 +26,7 @@ class EvenementController extends Controller
         return view('admin', compact('evenements'));
     }   
 
-    
+
     public function index(): View
     {
              return view('evenement');
@@ -50,18 +50,21 @@ class EvenementController extends Controller
              'Nom' => 'required|string|max:255',
              'Evenement' => 'required|string',
              'Image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+             'note' => 'nullable|string',
          ]);
  
          // Gérer l'upload de l'image s'il y en a une
          if ($request->hasFile('Image')) {
              $imagePath = $request->file('Image')->store('evenement', 'public');
              $validated['Image'] = $imagePath;
+
          }
  
          // Créer une nouvelle instance de l'événement
          $evenement = new Evenement();
          $evenement->Nom = $validated['Nom'];
          $evenement->Evenement = $validated['Evenement'];
+         $evenement->note = $validated['note'];
          if (isset($validated['Image'])) {
              $evenement->Image = $validated['Image'];
          }
