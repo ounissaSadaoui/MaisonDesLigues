@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="header-bg mt-5" id="connexion">
+    <div class="header-bg mt-5" id="connexion" style="background-color: #F5C000ff;">
         {{ __("Liste des évenements :") }}
     </div>
     <div id="evenements" class="mt-6 bg-white shadow-sm rounded-lg">

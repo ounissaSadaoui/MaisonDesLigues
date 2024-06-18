@@ -25,6 +25,8 @@ class EvenementController extends Controller
         $evenements = Evenement::with('user')->latest()->get();
         return view('admin', compact('evenements'));
     }   
+
+    
     public function index(): View
     {
              return view('evenement');

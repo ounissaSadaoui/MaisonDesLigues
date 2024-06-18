@@ -1,14 +1,10 @@
-
 <div class="body-bg" style="background-image: url('./joparis2024.jpeg'); background-size: cover; background-position: center;">
-
-<x-guest-layout>
-    <!-- Session Status -->
-
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <x-guest-layout>
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
             <!-- Email Address -->
             <div>
                 <x-input-label for="email" :value="__('Email')" />
@@ -19,12 +15,7 @@
             <!-- Password -->
             <div class="mt-4">
                 <x-input-label for="password" :value="__('Mot de passe')" />
-
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
 
@@ -48,5 +39,13 @@
                 </x-primary-button>
             </div>
         </form>
-    </div>
-</x-guest-layout>
+
+        <div class="flex items-center justify-end mt-4">
+            <form method="GET" action="{{ route('register') }}">
+                <x-primary-button class="ms-4">
+                    {{ __('S\'inscrire') }}
+                </x-primary-button>
+            </form>
+        </div>
+    </x-guest-layout>
+</div>

@@ -1,7 +1,6 @@
-<x-app-layout><x-slot name="header">
-</x-slot>
+<x-app-layout>
     <div class="body-bg" style="background-image: url('/images/joparis2024.jpeg');">
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="max-w-2xl mb-0 mx-auto p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('evenement.store') }}" enctype="multipart/form-data">
             @csrf
             <label for="Nom" class="mb-2 mt-2 block font-medium text-2xl text-black-800">{{ __('Titre de l\'évenement : ') }}</label>

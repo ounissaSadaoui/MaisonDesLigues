@@ -17,11 +17,10 @@ use Illuminate\Http\Response;
 |
 */
 
-
-
-Route::get('/', [EvenementController::class, 'index'])
-    ->middleware(['auth', 'verified'])
+Route::get('/', [EvenementController::class, 'dashboard'])
+    //->middleware(['auth', 'verified'])
     ->name('dashboard');
+Route::redirect('/dashboard', '/');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,7 +34,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::middleware(['auth'])->group(function () {
-        Route::get('/', [EvenementController::class, 'dashboard'])->name('dashboard');
         
         Route::resource('evenement', EvenementController::class)
             ->only(['index', 'create', 'store']);
@@ -59,6 +57,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/dashboard', [EvenementController::class, 'admin'])->name('admin.dashboard');
     Route::delete('/admin/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
 });
+Route::middleware('admin')->prefix('admin')->group(function () {
+    Route::get('/', [EvenementController::class, 'admin'])->name('admin.dashboard');
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+    Route::delete('/users', [UserController::class, 'destroy'])->name('admin.users.destroy');
+    Route::delete('/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
+});
 
 //gestion des users mise à jour
 
@@ -75,8 +79,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::delete('/users', [UserController::class, 'destroy'])->name('admin.users.destroy');
     Route::delete('/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
 });
-require __DIR__.'/auth.php';
 
+//inscription, connexion
+
+require __DIR__.'/auth.php';
 
 /*
 Route::get('/', [EvenementController::class, 'index'])->name('dashboard');
@@ -102,3 +108,4 @@ Route::middleware('auth')->group(function () {
 });
 require __DIR__.'/auth.php';
 */
+
