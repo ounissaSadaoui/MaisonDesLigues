@@ -68,10 +68,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 //supression des users
-
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users.index');
-    Route::delete('/admin/users', [UserController::class, 'destroy'])->name('admin.users.destroy');
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    Route::get('/', [EvenementController::class, 'admin'])->name('admin.dashboard');
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+    Route::patch('/users/{id}', [UserController::class, 'update'])->name('admin.users.update');
+    Route::delete('/users', [UserController::class, 'destroy'])->name('admin.users.destroy');
+    Route::delete('/evenement/bulk-delete', [EvenementController::class, 'bulkDelete'])->name('evenement.bulk-delete');
 });
 require __DIR__.'/auth.php';
 
