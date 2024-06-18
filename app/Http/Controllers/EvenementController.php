@@ -27,7 +27,7 @@ class EvenementController extends Controller
     }   
     public function index(): View
     {
-             //
+             return view('evenement');
     }
 
     /**
@@ -35,7 +35,7 @@ class EvenementController extends Controller
      */
     public function create()
     {
-        return views('evenement');    
+        return view('evenement');    
     }
 
     /**

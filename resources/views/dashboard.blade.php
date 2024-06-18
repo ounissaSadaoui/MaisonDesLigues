@@ -16,7 +16,7 @@ Dès le mois prochain, nous vous proposons tous les événements sportifs sur vo
                 <a href="#connexion" class="block mb-2 bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
                     Voir les évenements
                 </a>
-                <a href="{{ route('evenement.index') }}"  class="block bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
+                <a href="{{ route('evenement.create') }}"  class="block bg-red-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded w-full text-center">
                     Publier un évenement
                 </a>
             </div>

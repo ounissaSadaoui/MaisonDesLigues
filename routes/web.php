@@ -18,6 +18,7 @@ use Illuminate\Http\Response;
 */
 
 
+
 Route::get('/', [EvenementController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
