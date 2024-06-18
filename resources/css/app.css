@@ -24,7 +24,6 @@
 }
 
 .header-bg {
-    background-color: var(--vert);
     position: relative;
     z-index: 1;
     padding: 1.5rem;

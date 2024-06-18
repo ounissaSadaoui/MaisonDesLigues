@@ -1,27 +1,21 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-   
-   <!-- revenir ici, on va surement enlever -->
-    <!-- Primary Navigation Menu  -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+    <!-- revenir ici, on va surement enlever -->
+    <!-- Primary Navigation Menu -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="background-color: #018F1480;">
+        <div class="flex justify-between h-18">
             <div class="flex">
-                <!-- Logo -->
-               <!-- <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div> -->
-
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex" style="color: black">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Accueil') }}
                     </x-nav-link>
                     <x-nav-link :href="route('evenement.create')" :active="request()->routeIs('evenement')">
-
                         {{ __('Evenements') }}
-                
                     </x-nav-link>
+                    <div class="header-bg flex">
+                        <img src="/images/olympic-games.png" alt="Icône" class="w-8 h-8 mr-2">
+                        {{ __('Maison des ligues: Tous les sports à portée de main !') }}
+                    </div>
                 </div>
             </div>
 
@@ -30,11 +24,11 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <div>{{ Auth::user()->prenom }}</div>
 
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z" clip-rule="evenodd" />
                                 </svg>
                             </div>
                         </button>
@@ -78,9 +72,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('evenement.index')" :active="request()->routeIs('evenement.index')">
-
                 {{ __('Evenements') }}
-        
             </x-responsive-nav-link>
         </div>
 

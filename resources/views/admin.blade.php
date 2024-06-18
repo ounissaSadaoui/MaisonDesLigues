@@ -1,10 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <div class="header-bg flex items-center">
-            <img src="/images/olympic-games.png" alt="Icône" class="w-8 h-8 mr-2">
-            {{ __('Maison des ligues: Tous les sports à portée de main !') }}
-        </div>
-    </x-slot>
     <div class="body-bg" style="background-image: url('/images/paris-jo2024-1200x800.jpg');">
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
