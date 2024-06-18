@@ -4,13 +4,22 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Models\Evenement;
 
 class UserController extends Controller
 {
     public function index(): View
     {
+
+        //là on récup les publications 
+        $users = User::withCount('evenements')->get();
+        
+        return view('users', compact('users'));
+        /*
+        $users = User::withCount('evenement')->get();
         $users = User::all();
         return view('users', compact('users'));
+        */
     }
 
     public function update(Request $request, $id)

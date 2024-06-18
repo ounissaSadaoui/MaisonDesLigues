@@ -54,6 +54,36 @@
                     </div>
                 </form>
             </div>  
+        </form>
 
+
+
+        <div class="container">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+            <form action="{{ route('admin.users.destroy') }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <table class="table table-bordered">
+                    <thead class="thead" style="background-color: #009AEA80;">
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Nbr publications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->evenements_count }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </form>
+        </div>
 </div>
 </x-app-layout>

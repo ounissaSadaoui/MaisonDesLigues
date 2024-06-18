@@ -19,6 +19,9 @@
                 <a href="{{ route('evenement.create') }}"  class="block mb-2 bg-green-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full text-center">
                     Publier un évenement
                 </a>
+                <a href="#"  class="block mb-2 bg-green-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full text-center">
+                    Nombre d'évenements
+                </a>
             </div>
         </div>
     </div>
